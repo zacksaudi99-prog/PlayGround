@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#18251e" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Hearthvale — The Old Key</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=MedievalSharp&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="game" aria-label="Hearthvale medieval adventure game"></canvas>
+    <div id="toast" aria-live="polite"></div>
+    <section id="job-panel" class="panel hidden" aria-label="Companion jobs">
+      <button class="close" aria-label="Close jobs">×</button>
+      <div class="panel-kicker">YOUR LITTLE GUILD</div>
+      <h2>Choose a calling</h2>
+      <p class="panel-note">Give each new arrival a place in Hearthvale. Visit the campfire again to meet more.</p>
+      <div id="people-list"></div>
+      <div class="job-legend" id="job-roster"></div>
+    </section>
+    <div id="start-screen" class="screen">
+      <div class="intro-card">
+        <div class="crest">✦</div>
+        <div class="eyebrow">A SMALL KINGDOM, A BIG ADVENTURE</div>
+        <h1>Hearthvale</h1>
+        <div class="subtitle">&amp; The Old Key</div>
+        <p>Tap the old trees for coins. Welcome travelers at your campfire and choose their calling — archer, swordsman, or builder. Then brave the one-room ruin, where a sleeping warden guards the old key.</p>
+        <button id="start-button">Begin your tale <span>→</span></button>
+        <div class="hint">PHONE / TABLET · TOUCH OR KEYBOARD</div>
+      </div>
+    </div>
+    <div id="rotate-screen" class="rotate-screen">
+      <div class="rotate-inner">
+        <div class="phone-turn"><span></span></div>
+        <div class="eyebrow">HEARTHVALE</div>
+        <h2>Turn it upright</h2>
+        <p>This little tale is told in portrait. Rotate your phone or tablet to step into the village.</p>
+      </div>
+    </div>
+    <div id="win-screen" class="screen hidden">
+      <div class="intro-card win-card">
+        <div class="crest">✦</div><div class="eyebrow">THE OLD KEY IS YOURS</div>
+        <h1>Hearthvale<br>is home.</h1>
+        <p>You braved the ruin and brought its treasure back to a village that needed a hero.</p>
+        <div id="win-stats" class="win-stats"></div>
+        <button id="again-button">Play again <span>↻</span></button>
+      </div>
+    </div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
